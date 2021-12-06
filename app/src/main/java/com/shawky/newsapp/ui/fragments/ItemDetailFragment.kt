@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.annotation.RequiresApi
 import com.shawky.newsapp.R
-import com.shawky.newsapp.constants.routs.GlideAppModule
 import com.shawky.newsapp.databinding.FragmentItemDetailBinding
 import com.shawky.newsapp.models.NewsModel
+import com.shawky.newsapp.ui.adapter.NewsMultimediaVPAdapter
 import com.shawky.newsapp.utils.Utils
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -32,15 +32,16 @@ class ItemDetailFragment : Fragment(R.layout.fragment_item_detail) {
 
         if(bundle.get("News") != null){
             val news = bundle.get("News") as NewsModel
-
-            GlideAppModule.loadImage(binding!!.newsImage,news.multimedia.first().url,requireContext())
-
+            val imagesAdapter = NewsMultimediaVPAdapter(news.multimedia)
             binding?.apply {
                 pictureCopyright.text = ("© ${news.multimedia.first().copyright}")
                 detialTitleText.text = news.title
                 detailPublisher.text = news.publishedBy
                 itemDetail.text = news.abstract
                 detailDateText.text = Utils.dateFormat(news.publishDate)
+                imagesVp.apply {
+                    adapter = imagesAdapter
+                }
             }
         }
 

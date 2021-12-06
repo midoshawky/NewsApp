@@ -34,13 +34,10 @@
                 android:text=""
                 android:textColor="#FCD3D3D3" />
 
-            <ImageView
-                android:id="@+id/news_image"
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/images_vp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/news_placeholder"
-                tools:ignore="ContentDescription" />
+                android:layout_height="match_parent" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

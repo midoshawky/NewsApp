@@ -17,9 +17,6 @@ class NewsRvAdapter(private val newsList : ArrayList<NewsModel> ,val onItemClick
     inner class ViewHolder(private val layoutBinding: NewsItemLayoutBinding) : RecyclerView.ViewHolder(layoutBinding.root){
         @RequiresApi(Build.VERSION_CODES.O)
         fun bind(newsModel: NewsModel) {
-
-
-
             layoutBinding.titleText.text = newsModel.title
             layoutBinding.publishedText.text = newsModel.publishedBy
             layoutBinding.dateText.text = Utils.dateFormat(newsModel.publishDate)

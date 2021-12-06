@@ -6,9 +6,10 @@
         <entry key="app/src/main/res/layout-sw600dp/fragment_item_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout-sw600dp/fragment_item_list.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_item_detail.xml" value="0.16742654508611957" />
-        <entry key="app/src/main/res/layout/fragment_item_detail.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_item_detail.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_list_content.xml" value="0.34479166666666666" />
+        <entry key="app/src/main/res/layout/multimedia_viewpager_layout.xml" value="0.34479166666666666" />
         <entry key="app/src/main/res/layout/news_item_layout.xml" value="0.33" />
       </map>
     </option>

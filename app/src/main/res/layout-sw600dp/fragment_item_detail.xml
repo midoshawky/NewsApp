@@ -40,7 +40,12 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:src="@drawable/news_placeholder"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/images_vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
