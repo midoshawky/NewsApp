@@ -94,7 +94,7 @@
                 android:layout_height="match_parent"
                 android:padding="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/long_test_text"
+                android:text="@string/no_data"
                 android:textIsSelectable="true"
                 tools:context="com.shawky.newsapp.ui.fragments.ItemDetailFragment" />
         </LinearLayout>

@@ -7,16 +7,9 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.shawky.newsapp.R
 import com.shawky.newsapp.constants.routs.GlideApp
-import com.shawky.newsapp.constants.routs.GlideAppModule
 import com.shawky.newsapp.models.NewsModel
 import com.shawky.newsapp.databinding.NewsItemLayoutBinding
 import com.shawky.newsapp.utils.Utils
-import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.OffsetDateTime
-import java.time.format.DateTimeFormatter
-import java.util.*
 import kotlin.collections.ArrayList
 
 class NewsRvAdapter(private val newsList : ArrayList<NewsModel> ,val onItemClicked : (news : NewsModel) -> Unit) : RecyclerView.Adapter<NewsRvAdapter.ViewHolder>() {

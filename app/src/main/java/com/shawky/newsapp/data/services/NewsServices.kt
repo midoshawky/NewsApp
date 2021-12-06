@@ -3,23 +3,29 @@ package com.shawky.newsapp.data.services
 import android.util.Log
 import com.shawky.newsapp.constants.routs.ApiRouts
 import com.shawky.newsapp.models.ApiModel
-import com.shawky.newsapp.models.NewsModel
 import io.ktor.client.*
 import io.ktor.client.request.*
-import kotlinx.serialization.json.JsonObject
-import java.lang.Exception
+import javax.inject.Inject
 
-class NewsServices(val client:HttpClient) {
+enum class State {
+    LOADING,
+    LOADED,
+    ERROR
+}
 
-    suspend fun getAllNews() : ArrayList<NewsModel> {
+
+class NewsServices @Inject constructor(private val client:HttpClient) {
+
+    suspend fun getAllNews() : ApiState {
         return try {
           val data = client.get<ApiModel>(ApiRouts.WORLD_NEWS_URl)
-
-                data.results
+             ApiState(State.LOADED,data.results)
         }catch (e:Exception){
             Log.i("Api","Err : ${e.message}")
-            return arrayListOf()
+            return ApiState(State.ERROR,e.message)
         }
     }
 
 }
+
+class ApiState (val state: State = State.LOADING , val data : Any? = null)

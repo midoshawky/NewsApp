@@ -1,7 +1,6 @@
 package com.shawky.newsapp.constants.routs
 
 import android.content.Context
-import android.media.Image
 import android.widget.ImageView
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.AppGlideModule
