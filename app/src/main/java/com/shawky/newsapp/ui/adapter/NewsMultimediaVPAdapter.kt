@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.shawky.newsapp.R
-import com.shawky.newsapp.constants.routs.GlideApp
 import com.shawky.newsapp.databinding.MultimediaViewpagerLayoutBinding
+import com.shawky.newsapp.dependcies.GlideApp
 import com.shawky.newsapp.models.MultiMedia
 
 class NewsMultimediaVPAdapter(private val imagesDataList : ArrayList<MultiMedia>) : RecyclerView.Adapter<NewsMultimediaVPAdapter.ViewHolder>() {

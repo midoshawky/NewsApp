@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.shawky.newsapp.R
-import com.shawky.newsapp.constants.routs.GlideApp
 import com.shawky.newsapp.models.NewsModel
 import com.shawky.newsapp.databinding.NewsItemLayoutBinding
+import com.shawky.newsapp.dependcies.GlideApp
 import com.shawky.newsapp.utils.Utils
 import kotlin.collections.ArrayList
 
@@ -20,6 +20,7 @@ class NewsRvAdapter(private val newsList : ArrayList<NewsModel> ,val onItemClick
             layoutBinding.titleText.text = newsModel.title
             layoutBinding.publishedText.text = newsModel.publishedBy
             layoutBinding.dateText.text = Utils.dateFormat(newsModel.publishDate)
+
             GlideApp.with(layoutBinding.root.context)
                 .load(newsModel.multimedia.first().url)
                 .placeholder(R.drawable.news_placeholder)
