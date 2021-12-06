@@ -1,2 +1,2 @@
 # NewsApp
-Just news app test using built with ( MVVM + Dagger Hilt + Ktor + Corutines )
+Just news app test built in Kotlin using ( MVVM + Dagger Hilt + Ktor + Corutines )
